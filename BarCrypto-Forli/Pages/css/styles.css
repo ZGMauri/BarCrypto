@@ -1,0 +1,450 @@
+*{
+    text-decoration: dashed;
+}
+
+body {
+    background-color: rgb(71, 66, 66);
+}
+
+/*GRID PRINCIPAL*/
+
+.grid {
+    height: 100vh;
+    margin: 0%;
+    display: grid; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 10.4fr 0.1fr; 
+    grid-template-rows: 0.5fr 0.3fr 2.2fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "principal principal principal"
+    "footer footer footer";
+}
+
+/*MENU*/
+
+.header {
+    background-color: black;
+    border-top:solid 5px rgb(155, 9, 9);
+    border-bottom:solid 5px rgb(155, 9, 9);
+    border-left:solid 5px rgb(155, 9, 9);
+    border-right:solid 5px rgb(155, 9, 9);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: stretch;
+}
+
+.logo {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    order: 0;
+}
+
+h1 {
+    color: rgb(155, 9, 9);
+    font-size: 50px;
+    font-family:monospace;
+    display: block;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    order: 0;
+
+}
+
+#redes {
+    right: 20px;
+    font-size: 60px;
+    color: rgb(155, 9, 9);
+    position: fixed;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    order: 0;
+}
+
+/*BARRA NAVEGACION*/
+
+.nav {
+    background-color: rgb(155, 9, 9);
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.menu {
+    background-color: rgb(155, 9, 9);
+    color: white;
+    position: relative;
+    text-align: start;
+    left: 10px;
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: stretch;
+    order: -1;
+}
+
+.menuDesplegable {
+    background-color: rgb(155, 9, 9);
+    color: white;
+    position: absolute;
+    margin-top: -40px;
+    left: 250px;
+}
+
+.espacio {
+    background-color: rgb(71, 66, 66);
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: stretch;
+    order: 0;
+
+}
+
+.menuPrincipal {
+    background-color: wheat;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: stretch;
+    justify-content: space-around;
+    align-items: center;
+    order: 1;
+}
+
+/*PRINCIPAL*/
+
+.principal {
+    background-color: rgb(71, 66, 66);
+    border-bottom:solid 5px rgb(155, 9, 9);
+    grid-area: principal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+
+.caja1 {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: -1;
+    border-radius: 8px;
+    box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin:20px;
+    color: rgb(155, 9, 9);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.img {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    width: 500px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin:20px;
+}
+
+.caja3 {
+    display: block;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin:20px; 
+}
+
+/*FOOTER*/
+
+.footer {
+    background-color: rgb(71, 66, 66);
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "espacio maps horarios";
+}
+
+.maps {
+    color: rgb(199, 71, 71);
+    grid-area: maps;
+}
+
+.horarios {
+    color:rgb(199, 71, 71);
+    grid-area: horarios;
+}
+
+/*Reservas*/
+
+#reservas {
+    background-color: rgb(110, 105, 105);
+    border: solid 5px white;
+    margin-top: 50px;
+    width: 30%;
+    color: black;
+    margin-left: 200px;
+}
+
+/*Merchandising*/
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display:flex ;
+    flex-wrap: wrap ;
+    justify-content: center;
+    margin: auto;
+}
+
+.card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin:20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+/*Contacto*/
+
+#contacto {
+    font-size: 20px;
+    color: black;
+}
+
+#textoContacto {
+    height: 120px;
+    width: 40%;
+}
+
+#check {display: none;}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*CELULAR*/
+
+@media only screen and (max-width: 768px){
+    .grid {
+        height: 250vh;
+        margin: 0%;
+        display: grid; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 100%; 
+        grid-template-rows: 5% 5% auto auto;
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "header"
+        "nav"
+        "principal"
+        "footer";
+    }
+
+    .menu{display: none;}
+    .menuDesplegable{display: none;}
+    .espacio{display: none;}
+
+    .checkbtn{
+        display: block;
+        float: right;
+    }
+
+    .nav{
+        grid-area: nav;
+        background-color: rgb(155, 9, 9);
+        height: 20px;
+    }
+
+    .menuPrincipal{
+        position: fixed;
+        width: 90%;
+        height: 50%;
+        background: wheat;
+        top: 160px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .menuPrincipal:hover, .menuPrincipal.active{
+        background: wheat;
+        color: red;
+    }
+    #check:checked ~ .menuPrincipal{
+        left:0;
+    }
+
+
+    .principal {
+        background-color: rgb(71, 66, 66);
+        border-bottom:solid 5px rgb(155, 9, 9);
+        grid-area: principal;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        height: auto;
+        align-items: center;
+    }
+
+    .caja1 {
+        display: block;
+        width: 300px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: -1;
+        border-radius: 8px;
+        box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin:20px;
+        color: rgb(155, 9, 9);
+        font-family: 'Roboto Mono', monospace;
+    }
+    
+    .img {
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+        width: 300px;
+        max-height: 300px;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin:20px;
+    }
+    
+    .caja3 {
+        display: block;
+        width: 300px;
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 1;
+        border-radius: 8px;
+        box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin:20px; 
+    }
+
+    .container{
+        width: 100%;
+        max-width: 1200px;
+        height: 430px;
+        display: flex ;
+        flex-wrap: wrap ;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .card{
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin:20px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    #reservas {
+        background-color: rgb(110, 105, 105);
+        border: solid 5px white;
+        margin-top: 50px;
+        width: 50%;
+        color: black;
+        margin-left: 100px;
+    }
+
+    #contacto {
+        font-size: 20px;
+        color: black;
+    }
+    
+    #textoContacto {
+        height: 100%;
+        width: 90%;
+    }
+
+    .footer {
+        background-color: rgb(71, 66, 66);
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "maps" "horarios";
+        justify-content: center;
+    }
+    
+    .maps {
+        color: rgb(199, 71, 71);
+        grid-area: maps;
+    }
+    
+    .horarios {
+        color:rgb(199, 71, 71);
+        grid-area: horarios;
+    }
+}
